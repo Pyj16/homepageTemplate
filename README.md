@@ -1,0 +1,2 @@
+# homepageTemplate
+Replikacija naslovnice
