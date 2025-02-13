@@ -9,6 +9,26 @@ const cards = [
         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
         img: "",
     },
+    {
+        title: "card2",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
+        img: "",
+    },
+    {
+        title: "card2",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
+        img: "",
+    },
+    {
+        title: "card2",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
+        img: "",
+    },
+    {
+        title: "card2",
+        desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
+        img: "",
+    },
 ]
 
 const Cards = () => {
