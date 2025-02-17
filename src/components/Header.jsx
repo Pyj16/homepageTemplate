@@ -1,6 +1,9 @@
+import React from 'react';
+import {useState} from 'react';
+
 import defaultLogo from "../assets/defLogo.png"
 import hamburgerIcon from "../assets/hamburgerMenu.png"
-import {useState} from 'react';
+import closeMenu from "../assets/closeMenu.png"
 
 // TO-DO: turn into component
 const menuOptions = [
@@ -24,11 +27,13 @@ const menuOptions = [
 ]
 
 const Header = () => {
+    
     const [sidebar, setSidebar] = useState(false);
+
     return (
-        <header className="bg-white z-10 px-10 w-full fixed top-0 shadow-sm">
-            <nav className="flex m-auto justify-between container py-0 px-36">
-                <div className="pr-20">
+        <header className="bg-white z-10 w-full fixed top-0 shadow-md">
+            <nav className="flex m-auto justify-between container py-0 px-36 max-lg:px-2">
+                <div className="">
                     <img src={defaultLogo} alt="Logo" width={265} height={95}/>
                 </div>
 
@@ -43,13 +48,31 @@ const Header = () => {
                         ))}
                     </ul>
 
-                </div>
+                </div> 
                 
                 <button onClick={() => setSidebar(true)} className="navbar-hamburger r-0 content-center hidden max-lg:block">
                     <img src={hamburgerIcon} alt="Hamburger" height={60} width={60}/>
                 </button>
-                <div className={'fixed top-0 right-0 w-96 m-0 h-screen flex flex-col bg-gray-700 ' + (sidebar? "block" : "hidden")}>
-                        
+                <div className={'w-full fixed top-0' + (sidebar ? "" : " hidden")}>
+                        <div className='w-full h-screen left-0 fixed bg-black opacity-25'>
+
+                        </div>
+                        <div className='w-96 m-0 fixed right-0 opacity-100 h-screen flex flex-col bg-white '>
+                            <button onClick={() => setSidebar(false)} className='fixed right-5 top-5 flex'>
+                                <img src={closeMenu} alt="close" height={30} width={30}/>
+                            </button>
+                            
+                            <ul className="flex flex-col items-start uppercase ml-8 mt-20">
+                                {menuOptions.map((o) => (
+                                    <il className='mr-5 pb-5'>
+                                        <a href={o.link}>
+                                            {o.text}
+                                        </a>
+                                    </il>
+                                ))}
+                            </ul>
+                            
+                        </div>
                 </div>
             </nav>
         </header>

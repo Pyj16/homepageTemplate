@@ -13,7 +13,7 @@ const cards = [
         img: cardImg
     },
     {
-        title: "card2",
+        title: "card3",
         desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel expedita debitis delectus neque, perferendis fugiat aperiam at tempora excepturi? Veniam dolor consequatur id, vitae perspiciatis enim dicta. Nisi, soluta est.",
         img: cardImg
     },
@@ -25,12 +25,12 @@ const Cards = () => {
             {
                 // TO-DO: Fix the small devices quirkiness
             cards.map((c) => (
-                <div className="m-auto 2xl:w-[90rem] lg:w-[64rem] md:w-[36rem] sm:w-[20rem]"> 
-                    <div className="h-80 my-10 border-solid border-2 flex max-md:flex-col">
-                        <div className="w-2/3">
+                <div className="m-auto 2xl:w-[90rem] lg:w-[64rem] md:w-[48rem] sm:w-full"> 
+                    <div className="flex h-80 max-lg:h-fit my-10 max-sm:my-30 border-solid border-2 max-md:flex-col">
+                        <div className="w-2/3 m-0 max-md:w-full max-md:m-auto">
                             <img className="w-full h-full" src={c.img} alt="Card"/>
                         </div>
-                        <div className="p-5 w-1/3">
+                        <div className="p-5 w-1/3 m-0 max-md:w-full max-md:m-auto">
                             <h1 className="pb-5 text-6xl font-bold">
                                 {c.title} 
                             </h1>

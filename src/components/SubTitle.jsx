@@ -1,6 +1,6 @@
 const SubTitle = () => {
     return(
-        <div className='p-20 relative top-0 flex flex-col'>
+        <div className='md:p-20 p-0 relative top-0 flex flex-col'>
             <div className="m-auto flex">
                 <h1 className="font-bold text-4xl">
                     SubTitle
