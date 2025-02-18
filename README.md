@@ -1,6 +1,15 @@
 # Template za naslovnice
 
-Uporabljene tehnologije: JS, React, TailwindCSS
+Uporabljene tehnologije: JS, React, Vite, TailwindCSS
+
+# Zagon spletne strani
+Po prenosu projektna na lokalno mapo, v terminalu preusmerite se v 'homepageTemplate' direktoriju', in postusite zagon:
+
+..>homepageTemplate> npm run dev
+
+Mogoče boste potrebovali tailwind in vite instalaciji v direktoriji, tako če dobite napako, poskusite:
+
+..>homepageTemplate> npm install tailwindcss @tailwindcss/vite
 
 # Struktura projekta
 
