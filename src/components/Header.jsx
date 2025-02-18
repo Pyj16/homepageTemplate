@@ -5,30 +5,11 @@ import defaultLogo from "../assets/defLogo.png"
 import hamburgerIcon from "../assets/hamburgerMenu.png"
 import closeMenu from "../assets/closeMenu.png"
 
-// TO-DO: turn into component
-const menuOptions = [
-    {
-        link: '/',
-        text: 'Home'
-    },
-    {
-        link: '/',
-        text: 'About us'
-    },
-    {
-        link: '/',
-        text: 'Store'
-    },
-    {
-        link: '/',
-        text: 'Contact us'
-    },
-    
-]
+import {menuOptions} from '../data/mockDb.js'
 
 const Header = () => {
     
-    const [sidebar, setSidebar] = useState(false);
+    const [sidebar, setSidebar] = useState(false); // Enables or disables sidebar
 
     return (
         <header className="bg-white z-10 w-full fixed top-0 shadow-md">
@@ -39,12 +20,12 @@ const Header = () => {
 
                 <div className="r-0 flex-col content-center max-lg:hidden">
                     <ul className="flex-1 flex flex-row justify-center items-center uppercase mt-0">
-                        {menuOptions.map((o) => (
-                            <il className='mr-5'>
+                        {menuOptions.map((o, i) => (
+                            <li key={i} className='mr-5'>
                                 <a href={o.link}>
                                     {o.text}
                                 </a>
-                            </il>
+                            </li>
                         ))}
                     </ul>
 
@@ -63,12 +44,12 @@ const Header = () => {
                             </button>
                             
                             <ul className="flex flex-col items-start uppercase ml-8 mt-20">
-                                {menuOptions.map((o) => (
-                                    <il className='mr-5 pb-5'>
+                                {menuOptions.map((o, i) => (
+                                    <li key={i} className='mr-5 pb-5'>
                                         <a href={o.link}>
                                             {o.text}
                                         </a>
-                                    </il>
+                                    </li>
                                 ))}
                             </ul>
                             

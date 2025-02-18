@@ -1,33 +1,6 @@
-import newsImage from '../assets/newsImage.png'
+import {newsArticles} from "../data/mockDb.js" 
 
-// TO-DO: make this a component
-const articles = [
-    {
-        title: 'News1',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dolore.',
-        img: newsImage,
-        time: '01.01.2025',
-    },
-    {
-        title: 'News2',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dolore.',
-        img: newsImage,
-        time: '01.01.2025',
-
-    },
-    {
-        title: 'News3',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dolore.',
-        img: newsImage,
-        time: '01.01.2025',
-    },
-    {
-        title: 'News4',
-        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dolore.',
-        img: newsImage,
-        time: '01.01.2025',
-    },
-]
+const articles = newsArticles
 
 const News = () => {
     return(
@@ -37,8 +10,8 @@ const News = () => {
             </h1>
             <div className='relative top-0 flex xl:overflow-x-hidden overflow-x-scroll'>
                 <div className="m-auto flex flex-row">
-                    {articles.map((a) => (
-                        <div className='w-1/4 px-12 flex-col '>
+                    {articles.map((a, i) => (
+                        <div key={i} className='w-1/4 px-12 flex-col '>
                             <div className='w-52'>
                                 <img src={a.img} alt="News Image" height={360} width={360}/>
                                 <h1 className='text-2xl font-bold'>

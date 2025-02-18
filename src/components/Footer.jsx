@@ -11,18 +11,18 @@ const Footer = () => {
                     </div>
                     <div className="w-1/3 max-lg:w-full">
                         <div className="text-center">
-                            Text
+                            Place Name
                         </div>
                         <div className="text-center">
-                            Text
+                            Address
                         </div>
                     </div>
                     <div className="w-1/3 max-lg:w-full">
                         <div className="text-center">
-                            Text2
+                            Phone: +123 456 789
                         </div>
                         <div className="text-center">
-                            Text2
+                            Email@example.com
                         </div>
                     </div>
                 </div>
