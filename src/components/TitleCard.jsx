@@ -1,17 +1,17 @@
 import imgArrow from '../assets/imgArrow.png'
 
 import {useState} from 'react'
-import {titleImgs} from "../data/mockDb.js" 
+import {titleImgs} from "../data/mockDb.js"
 
 const imgs = titleImgs
 
 const TitleCard = () => {
 
-    const [img, setImg] = useState(imgs[0]) // Image of the title card
-    const [oldImg, setOldImg] = useState(imgs[0]) // Transition image
-    const [opacity, setOpacity] = useState(100) // Opacity of transition image
+    const [img, setImg] = useState(imgs[0]) // Current image on display
+    const [oldImg, setOldImg] = useState(imgs[0]) // Old transition image
+    const [opacity, setOpacity] = useState(100) // Opacity of transition
+    const [enabled, setEnabled] = useState(true) // Whether the left and right buttons are enabled
 
-    // Fade-in-out logic
     const changeNext = () => {
         setOldImg(img);
         const newIndex = imgs.indexOf(img) + 1;
@@ -29,7 +29,7 @@ const TitleCard = () => {
         setTimeout(() => {
             setOpacity(100)
             setOldImg(newImg)
-        }, 1000)
+        }, 500)
         setTimeout(() => {
             setEnabled(true)
         }, 1000)
@@ -52,24 +52,23 @@ const TitleCard = () => {
         setTimeout(() => {
             setOpacity(100)
             setOldImg(newImg)
-        }, 1000)
+        }, 500)
         setTimeout(() => {
             setEnabled(true)
         }, 1000)
     }
-    // Fade-in-out logic
 
     return(
         <div className='relative top-0 pb-[48rem]'>
             <h1 className="absolute z-[2] md:pl-56 pl-5 pt-24 lg:pt-64 text-7xl drop-shadow-sm font-bold">
                 Title
             </h1>
-            <img className={"w-full h-[48rem] absolute duration-1000 " } src={img} alt="Title Image" />
-            <img className={"w-full h-[48rem] absolute duration-1000 " + "opacity-" + opacity} src={oldImg} alt="Transition Image" />
-            <button onClick={changePrev} className={'absolute z-4 left-20 top-72 opacity-50 max-lg:hidden'}>
+            <img className={"object-none w-full h-[48rem] absolute " } src={img} alt="Title Image" />
+            <img className={"object-none w-full h-[48rem] absolute duration-500 " + "opacity-" + opacity} src={oldImg} alt="Transition Image" />
+            <button onClick={changePrev} disabled={!enabled} className={'absolute z-4 left-20 top-72 opacity-50 max-lg:hidden'}>
                 <img className='scale-x-[-1] z-[2]' src={imgArrow} alt="arrow" height={100} width={100}/>
             </button>
-            <button onClick={changeNext} className='absolute z-4 right-20 top-72 opacity-50 max-lg:hidden'>
+            <button onClick={changeNext} disabled={!enabled} className='absolute z-4 right-20 top-72 opacity-50 max-lg:hidden'>
                 <img className='z-[2]' src={imgArrow} alt="arrow" height={100} width={100}/>
             </button>
         </div>

@@ -7,7 +7,7 @@ const Cards = () => {
                 <div key={i} className="m-auto 2xl:w-[90rem] lg:w-[64rem] md:w-[48rem] sm:w-full"> 
                     <div className="flex h-80 max-lg:h-fit my-10 max-sm:my-30 border-solid border-gray-600 border-[1px] max-md:flex-col">
                         <div className="w-2/3 m-0 max-md:w-full max-md:m-auto">
-                            <img className="w-full h-full" src={c.img} alt="Card"/>
+                            <img className="object-none w-full h-full" src={c.img} alt="Card"/>
                         </div>
                         <div className="p-5 w-1/3 m-0 max-md:w-full max-md:m-auto">
                             <h1 className="pb-5 text-6xl font-bold">
