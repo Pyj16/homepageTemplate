@@ -63,8 +63,8 @@ const TitleCard = () => {
             <h1 className="absolute z-[2] md:pl-56 pl-5 pt-24 lg:pt-64 text-7xl drop-shadow-sm font-bold">
                 Title
             </h1>
-            <img className={"object-none w-full h-[48rem] absolute " } src={img} alt="Title Image" />
-            <img className={"object-none w-full h-[48rem] absolute duration-500 " + "opacity-" + opacity} src={oldImg} alt="Transition Image" />
+            <img className={"object-none w-full h-[48rem] absolute"} src={img} alt="Title Image" />
+            <img className={"object-none w-full h-[48rem] absolute duration-500 opacity-" + opacity} src={oldImg} alt="Transition Image" />
             <button onClick={changePrev} disabled={!enabled} className={'absolute z-4 left-20 top-72 opacity-50 max-lg:hidden'}>
                 <img className='scale-x-[-1] z-[2]' src={imgArrow} alt="arrow" height={100} width={100}/>
             </button>

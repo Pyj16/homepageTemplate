@@ -9,11 +9,11 @@ const SubTitle = () => {
             <div className="w-1/2 m-auto flex-col">
                 <p className="pt-12">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat eius cupiditate sequi sit rerum minus 
-                    <a className="underline text-green-700 hover:text-green-950" href="/">nulla nihil aspernatur expedita</a>
+                    <a className="underline text-blue-700 hover:text-blue-950" href="/">nulla nihil aspernatur expedita</a>
                     , 
-                    <a className="underline text-green-700 hover:text-green-950" href="/">nam ducimus cumque vero</a>
+                    <a className="underline text-blue-700 hover:text-blue-950" href="/">nam ducimus cumque vero</a>
                     , 
-                    <a className="underline text-green-700 hover:text-blue-950" href="/">atque qui beatae mollitia</a>
+                    <a className="underline text-blue-700 hover:text-blue-950" href="/">atque qui beatae mollitia</a>
                     ! Laborum, ipsa sint!
                 </p>
                 <p className="pt-4">

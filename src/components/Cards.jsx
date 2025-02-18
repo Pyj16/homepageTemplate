@@ -16,7 +16,7 @@ const Cards = () => {
                             <p className="pb-5">
                                 {c.desc}
                             </p>
-                            <button className="w-36 h-10 border-solid border-2 rounded-xl border-green-600 hover:bg-green-800 hover:text-white">
+                            <button className="w-36 h-10 border-solid border-2 rounded-xl border-blue-600 hover:bg-blue-800 hover:text-white">
                                 View
                             </button>
                         </div>
